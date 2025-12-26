@@ -1,0 +1,137 @@
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.brain-icon {
+  color: var(--text-white);
+  position: relative;
+  z-index: 2;
+}
+
+.zap-icon {
+  position: absolute;
+  color: #fbbf24;
+  transform: scale(0.6) translate(8px, -8px);
+  z-index: 3;
+}
+
+.logo-text h1 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.logo-text p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin: 0;
+  margin-top: 0.25rem;
+}
+
+.status-indicators {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-light);
+}
+
+.status-item span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.database-icon.elasticsearch {
+  color: var(--elasticsearch-orange);
+}
+
+.database-icon.postgresql {
+  color: var(--postgresql-blue);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 0.25rem;
+}
+
+.status-dot.online {
+  background-color: var(--success-green);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.status-dot.offline {
+  background-color: var(--error-red);
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .logo-text h1 {
+    font-size: 1.25rem;
+  }
+  
+  .logo-text p {
+    font-size: 0.75rem;
+  }
+  
+  .status-indicators {
+    gap: 1rem;
+  }
+  
+  .status-item {
+    padding: 0.375rem 0.75rem;
+  }
+  
+  .status-item span {
+    font-size: 0.75rem;
+  }
+}
